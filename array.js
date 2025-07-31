@@ -87,7 +87,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // REVERSE
 // basically this method reverses the arrays order.
 // reverse array method alos mutates the original array.
-let arr2 = ['d','c','b','a'];
+// let arr2 = ['d','c','b','a'];
 // console.log(arr2.reverse())
 
 //CONCAT
@@ -122,24 +122,24 @@ let arr2 = ['d','c','b','a'];
 
 // forEach with map and sets
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
 
-currencies.forEach((value,  key , map) => {
-  console.log(`${key} : ${value}`)
+// currencies.forEach((value,  key , map) => {
+//   console.log(`${key} : ${value}`)
 
-})// first one(value) will be the current value in current iteration
+// })// first one(value) will be the current value in current iteration
 // value = First element ; key = index ; map = entire array
 
 // set
 // set does not have key and value properties rather have value and value properties.
-const currenciesUnique = new Set([['USD', 'dollar'], 'INR', 'EUR', 'DNR'])
+// const currenciesUnique = new Set([['USD', 'dollar'], 'INR', 'EUR', 'DNR'])
 
-currenciesUnique.forEach((key, value, map ) => {
-  console.log(`${key} : ${value}`)
-})
+// currenciesUnique.forEach((key, value, map ) => {
+//   console.log(`${key} : ${value}`)
+// })
 
 // console.log(currenciesUnique)
