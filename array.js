@@ -193,38 +193,89 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 
 
 
-const dogsJulia1 = [3, 5, 2, 12, 7];
-const dogsKate1 = [4, 1, 15, 8, 3];
+// const dogsJulia1 = [3, 5, 2, 12, 7];
+// const dogsKate1 = [4, 1, 15, 8, 3];
 
-const newJulia = [...dogsJulia1]
+// const newJulia = [...dogsJulia1]
 
-newJulia.slice(1)
-newJulia.splice(-2)
+// newJulia.slice(1)
+// newJulia.splice(-2)
 
-// console.log (dogsJulia1)
+// // console.log (dogsJulia1)
 
-function checkDogs1 (julArr, kateArr){
-//  dog >= 3 yrs - old dog
-//  dog < 3 yrs - young dog
+// function checkDogs1 (julArr, kateArr){
+// //  dog >= 3 yrs - old dog
+// //  dog < 3 yrs - young dog
 
-  julArr.forEach((el,i) => {
-  if(el >= 3) {
-    console.log(`Dog number ${i + 1} is an adult and is ${el} years old` )
-  } else {
-    console.log(`Dog number ${i + 1} is still a puppy`)
-  }
+//   julArr.forEach((el,i) => {
+//   if(el >= 3) {
+//     console.log(`Dog number ${i + 1} is an adult and is ${el} years old` )
+//   } else {
+//     console.log(`Dog number ${i + 1} is still a puppy`)
+//   }
   
- })
+//  })
 
-  kateArr.forEach((el,i) => {
-  if(el < 3) {
-    console.log(`Dog number ${i + 1} is an adult and is ${el} years old` )
-  } else {
-    console.log(`Dog number ${i + 1} is still a puppy`)
-  }
+//   kateArr.forEach((el,i) => {
+//   if(el < 3) {
+//     console.log(`Dog number ${i + 1} is an adult and is ${el} years old` )
+//   } else {
+//     console.log(`Dog number ${i + 1} is still a puppy`)
+//   }
   
- })
+//  })
 
+// }
+
+// checkDogs1(newJulia , dogsKate1)
+
+
+/* ------------------------------------------------------------------------- */
+// Map , filter and reduce
+
+
+//Map - allows basically to apply operatins to the elements within the original array and returns a new array with tehe eelements with operations performed on them-------> example - Current * 2
+
+// filter - filter method returns a new array containing the array elements that passed a specified test condition. Example - cyurrent > 2
+
+// reduce - reduce method reduces elements down to a single element, adding elements together. Example - [1,2,3,4] ===>> accumulator + current ==> 10
+
+
+
+//MAP ---->>
+
+const eurToUsd = 1.1 ;
+
+const movementsUSd = movements.map(mov => mov * eurToUsd )
+
+const movementsDescription =  movements.map((mov, i) => `Movement ${i+1} : You deposited ${mov} : You withdrew ${mov}`)
+
+
+// console.log(movementsDescription)
+// console.log(movementsUSd)
+
+
+
+
+// map method to compute usernames for each account owner  in the application
+
+
+const createNames = function(user){
+const userName = user.toLowerCase().split(' ').map(name => name[0]).join('')
+// console.log(userName)
 }
 
-checkDogs1(newJulia , dogsKate1)
+
+const user = 'Nigga Wigga Jigga' // nwg
+
+
+console.log(createNames(user))
+
+
+
+
+// const user2 = 'chriswilliams johnson'
+// const userName2 = user2.split('')
+// const userName3 = user2.split(' ')
+// console.log(userName2)
+// console.log(userName3)
